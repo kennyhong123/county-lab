@@ -20,7 +20,7 @@ def get_statefact(state):
     fact = 0
     for c in counties:
         if state == c["State"]:
-            fact += c["Retail"]["Sales"]
+            fact += c["Sales"]["Retail"]["Sales"]
     funfact = Markup("<p>" + "Number of Retail Sales " + state + " is, " + str(fact) + "</p>")
     return funfact
 
