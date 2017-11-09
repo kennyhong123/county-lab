@@ -1,11 +1,14 @@
 <html>
   <head>
-    <title>Demographics - Fun</title>
+    <title>Demographics</title>
   </head>
-  
   <body>
-    <select name="states">
-      {{ option }}
-    </select>
+    <form name="select" action="/app">
+      <select name="dat">
+        {{ option }}
+      </select>
+      <input type="submit" value="Submit">
+    </form>
+    {{ fact }}
   </body>
 </html>
