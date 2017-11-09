@@ -17,12 +17,12 @@ def get_state_options():
     return choice
 
 def get_statefact(state):
-    fact = 0
+    v = 0
     for c in counties:
         if state == c["State"]:
-            fact += c["Employment"]["Firms"]["Total"]
-    funfact = Markup("<p>" + "Number of People Employed in " + state + " is, " + str(fact) + "</p>")
-    return funfact
+            v += c["Retail"]["Sales"]
+    fact = Markup("<p>" + "Number of Retail Sales " + state + " is, " + str(v) + "</p>")
+    return fact
 
 @app.route("/")
 def render_main():
