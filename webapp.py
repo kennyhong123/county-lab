@@ -22,7 +22,7 @@ def get_statefact(state):
         if state == c["State"]:
             fact += c["Retail"]["Sales"]
     funfact = Markup("<p>" + "Number of Retail Sales " + state + " is, " + str(fact) + "</p>")
-    return fact
+    return funfact
 
 @app.route("/")
 def render_main():
